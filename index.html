@@ -5,25 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    </link>
+    <link rel="stylesheet" href="./dist/output.css">
     <title>Project-Fitness</title>
 </head>
 
 <body>
-    <div>
+    <div id="mainsection">
         <div>
             <h1>Main title</h1>
         </div>
-        <div>
-            <ul>
-                <li>Workout</li>
-                <li>Nutrition</li>
-                <li>Progress</li>
-                <li>About Us</li>
-            </ul>
-        </div>
+        <button id="workout">Workout</button>
+        <button id="nutrition">Nutrition</button>
+        <button id="progress" type="submit" onclick="showProgress()">Progress</button>
+        <button id="about">About Us</button>
     </div>
-<script src="assets\js\script.js"></script>
+
+
+
+
+
+    <div id="progresssection">
+        <div id="exercisehistory">
+            <h1>Exercise History</h1>
+            <div id="calendar"></div>
+            <div>
+                <h1>Profile</h1>
+                <p>Weight</p>
+                <input type="text">
+                <p>Height</p>
+                <input type="text">
+                <p>BMI</p>
+            </div>
+
+
+            <div id="bodyinfo">
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="assets\js\progress.js"></script>
 </body>
 
 </html>
