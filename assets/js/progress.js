@@ -12,3 +12,6 @@ var showProgress = function () {
     })
 }
    
+// var goal = function() {
+//     $("#weight").
+// }
