@@ -7,6 +7,8 @@ var todaysDate = moment().format("YYYY-MM-DD");
 var mainSection = $("#mainsection");
 var apiKey = "c45e4b59343fbe91045af5de68b5208ef9091deb";
 var storageData = null;
+var weightInput = $("#weight")
+var heightInput = $("#height")
 
 
 //Progress function called onclick button
@@ -33,7 +35,7 @@ function showHideWeightModal(show) {
     if (show) {
         $("#weightmodal").removeClass("hidden");
     } else {
-        $("#weight").val('');
+        weightInput.val('');
         $("#weightmodal").addClass("hidden");
     }
 }
@@ -43,12 +45,38 @@ function submitWeight() {
     storageData.weight = storageData.weight || [];
     storageData.weight.push({
         date: todaysDate,
-        weight: $("#weight").val()
-    });
-    console.log(storageData);
+        weight: weightInput.val()
+    });   
     localStorage.setItem("BBB", JSON.stringify(storageData));
     showHideWeightModal(false);
 }
+
+//function to show or hide height modal
+function showHideHeightModal(show) {
+    if (show) {
+        $("#heightmodal").removeClass("hidden");
+    } else {
+        weightInput.val('');
+        $("#heightmodal").addClass("hidden");
+    }
+}
+
+//function to save Height
+function submitHeight() {
+    storageData.height = storageData.height || [];
+    storageData.height.push({
+        date: todaysDate,
+        height: heightInput.val()
+    });
+        localStorage.setItem("BBB", JSON.stringify(storageData));
+    showHideHeightModal(false);
+}
+
+
+
+
+
+
 
 
 
@@ -65,3 +93,10 @@ function readFromStorage() {
 function addWorkoutHistory () {
 
 }
+
+
+
+// function calculateBMI(){
+//     var BMI = weightInput /(heightdisplay.exp(2))
+//     console.log(BMI);
+// }
