@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    border: 2px solid red;
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    color: #f95738;
+}
+
+.logo {
+    width: 1in;
+    height: 1in;
+    margin-left: 10px;
+}
+
+.image-banner{
+    width: 100%;
+    height:auto;
+}
+
+.jumbotron{
+    padding: 10px 0px 10px 0px;
+}
+
+.card{
+    padding: 5px 0px 10px 0px;
+}
+
