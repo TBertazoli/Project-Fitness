@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    populateHistory();
-
+    readFromStorage();
+    populateWeightHistory();
 });
 
 var todaysDate = moment().format("YYYY-MM-DD");
@@ -16,55 +16,52 @@ var showProgress = function () {
     // populateCalendar();
 }
 
-// this variable will fetch the weight api
-var weightApi = "https://wger.de/api/v2/weightentry/";
-fetch(weightApi, {
-    headers: {
-        'Authorization': "Token " + apiKey
+function populateWeightHistory() {
+    if (!storageData.weight || storageData.weight.length === 0) {
+        return;
     }
-}).then(function (response) {
-    response.json().then(function (data) {
-        if (data.results.length === 0) {
-            return;
-        }
 
-        //variable to create a table element to insert data and weight
-        for (var i = 0; i < data.results.length; i++) {
-            var createElement = $(`<tr><td>${data.results[i].date}</td><td>${data.results[i].weight}</td></tr>`);
-            $('#showweightbody').append(createElement);
-        }
-    })
-})
+    //variable to create a table element to insert data and weight
+    for (var i = 0; i < storageData.weight.length; i++) {
+        var createElement = $(`<tr><td class="date-col">${storageData.weight[i].date}</td><td class="weight-col">${storageData.weight[i].weight}</td></tr>`);
+        $('#showweightbody').append(createElement);
+    }
+}
 
 // function to show or hide weight modal
 function showHideWeightModal(show) {
     if (show) {
         $("#weightmodal").removeClass("hidden");
     } else {
+        $("#weight").val('');
         $("#weightmodal").addClass("hidden");
     }
 }
 
-//function to save weight (POST)
+//function to save weight
 function submitWeight() {
-    fetch(weightApi, {
-        headers: {
-            'Authorization': "Token " + apiKey,
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-        method: 'POST',
-        body: JSON.stringify({
-            weight: $("#weight").val(),
-            date: todaysDate,
-        }),
-    }).then(function (response) {
-        response.json().then(function (data) {
-            console.log(data);
-            showHideWeightModal(false);
-        })
-    })
+    storageData.weight = storageData.weight || [];
+    storageData.weight.push({
+        date: todaysDate,
+        weight: $("#weight").val()
+    });
+    console.log(storageData);
+    localStorage.setItem("BBB", JSON.stringify(storageData));
+    showHideWeightModal(false);
 }
 
+
+
 function readFromStorage() {
-    storageData = storage.getItem("BBB") || {};
+    storageData = JSON.parse(localStorage.getItem("BBB")) || {};
+    if (storageData.events) {
+        storageData.events.forEach(e=>{
+            e.date = moment(e.date);
+        });
+        console.log(storageData.events);
+    }
+}
+
+function addWorkoutHistory () {
+
 }

@@ -9,3 +9,15 @@
     padding: 20px;
     border: solid black 3px;
 }
+
+.table-auto {}
+
+
+/* column css */
+.date-col, 
+.weight-col {
+    border: solid black 3px;
+    padding: 5px;
+    text-align: center;
+}
+
