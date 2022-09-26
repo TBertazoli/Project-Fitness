@@ -1,26 +1,19 @@
+$(document).ready(() => {
+    populateHistory();
+
+});
+
 var todaysDate = moment().format("YYYY-MM-DD");
 var mainSection = $("#mainsection");
 var apiKey = "c45e4b59343fbe91045af5de68b5208ef9091deb";
+var storageData = null;
 
-// login section
-function showHideLogin(show) {
-    if (show) {
-        $("#loginmodal").removeClass("invisible");
-    } else {
-        $("#loginmodal").addClass("invisible");
-    }
-}
 
 //Progress function called onclick button
 var showProgress = function () {
-    $("#mainsection").addClass("invisible");
-    $("#progresssection").removeClass("invisible");
-    $("#calendar").datepicker({
-        inline: true,
-        firstDay: 1,
-        showOtherMonths: true,
-        dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    })
+    $("#mainsection").addClass("hidden");
+    $("#progresssection").removeClass("hidden");
+    // populateCalendar();
 }
 
 // this variable will fetch the weight api
@@ -38,19 +31,17 @@ fetch(weightApi, {
         //variable to create a table element to insert data and weight
         for (var i = 0; i < data.results.length; i++) {
             var createElement = $(`<tr><td>${data.results[i].date}</td><td>${data.results[i].weight}</td></tr>`);
-            $('#tablebody').append(createElement);
-
+            $('#showweightbody').append(createElement);
         }
-
     })
 })
 
 // function to show or hide weight modal
 function showHideWeightModal(show) {
     if (show) {
-        $("#weightmodal").removeClass("invisible");
+        $("#weightmodal").removeClass("hidden");
     } else {
-        $("#weightmodal").addClass("invisible");
+        $("#weightmodal").addClass("hidden");
     }
 }
 
@@ -72,5 +63,8 @@ function submitWeight() {
             showHideWeightModal(false);
         })
     })
+}
 
+function readFromStorage() {
+    storageData = storage.getItem("BBB") || {};
 }
