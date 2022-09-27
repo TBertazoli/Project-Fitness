@@ -28,3 +28,15 @@ nav{
     padding: 5px 0px 10px 0px;
 }
 
+.link-buttons{
+    background-color:blue;
+    padding: 2px;
+    letter-spacing:normal;
+    border-radius: 5px;
+    
+}
+.reasons{
+    background-color: gray;
+    width: 80%;
+    height: auto;
+}
