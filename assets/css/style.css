@@ -9,6 +9,15 @@
 nav{
     color: #f95738;
 }
+nav p{
+    font-size: 40px;
+   display: flex;
+   justify-content: flex-start;
+}
+
+nav i{
+   
+}
 
 .logo {
     width: 1in;
@@ -30,19 +39,6 @@ nav{
 
 }
 
-<<<<<<< HEAD
-.link-buttons{
-    background-color:blue;
-    padding: 2px;
-    letter-spacing:normal;
-    border-radius: 5px;
-    
-}
-.reasons{
-    background-color: gray;
-    width: 80%;
-    height: auto;
-=======
 .progress-section {
     font-size: 20px;
 }
@@ -67,5 +63,4 @@ nav{
     border: solid grey 2px;
     padding: 10px;
     margin: 5px
->>>>>>> develop
 }
