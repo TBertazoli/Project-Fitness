@@ -1,5 +1,4 @@
 
 
-var exercise = fetch("https://wger.de/api/v2/exercise/?muscles=1&equipment=3");
+var exercise = fetch("https://wger.de/api/v2/exercise/?limit=20&offset=20");
 console.log(exercise);
-$(".exercise").append('<ul>' + exercise + '</ul>');
