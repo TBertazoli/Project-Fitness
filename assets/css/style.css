@@ -1,0 +1,63 @@
+
+* {
+    box-sizing: border-box;
+    border: 2px solid red;
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    color: #f95738;
+}
+nav p{
+    font-size: 40px;
+   display: flex;
+   justify-content: flex-start;
+}
+
+
+.logo {
+    width: 1in;
+    height: 1in;
+    margin-left: 10px;
+}
+
+.image-banner{
+    width: 100%;
+    height:auto;
+}
+
+.jumbotron{
+    padding: 10px 0px 10px 0px;
+}
+
+.card{
+    padding: 5px 0px 10px 0px;
+
+}
+
+.progress-section {
+    font-size: 20px;
+}
+
+.exercise-history {
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    border: solid black 3px;
+}
+
+/* column css */
+.date-col, 
+.weight-col {
+    border: solid black 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.shortcut {
+    border: solid grey 2px;
+    padding: 10px;
+    margin: 5px
+}
