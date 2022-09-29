@@ -10,6 +10,7 @@ var apiKey = "606e20749d19a1f0dde25fdc1f566b52";
 var inputText = $("#ingredientlist");
 var storageData = null;
 var mealPlanIndex = 0;
+var searchForIngredients = $("#searchforingredients")
 
 
 inputText.keyup(function () {
@@ -43,12 +44,20 @@ function readFromStorage() {
     storageData = JSON.parse(localStorage.getItem("nutrition")) || [];
 }
 
-//function to populate plan
+//function to populate plan and ingredients
 function populatePlan() {
     $('#showplan').empty();
+    console.log(storageData)
     for (var i = 0; i < storageData.length; i++) {
         var mealPlan = storageData[i];
-        var createElement = $(`<tr><td class="meal-col">${mealPlan.mealName}</td><td class="date-col">${mealPlan.date}</td><td><button type="button" onclick='showHideIngredients(true, ${i})'>Add ingredient</button></td></tr>`);
+        var createElement = $(`<tr>
+        <td>
+        <div>${mealPlan.mealName}</div>
+        <div>${mealPlan.date}</div>
+        <div><button type="button" onclick='showHideIngredients(true, ${i})'>Add ingredient</button></div>
+        </td>
+        <td>${mealPlan.ingredients.join(', ')}</td>
+        </tr>`);
         $('#showplan').append(createElement);
     }
 
@@ -59,7 +68,7 @@ function showHideIngredients(show, index) {
     if (show) {
         $('#ingredientsdropdown').removeClass("hidden");
     } else {
-        // nutritionDiary.val('');
+        searchForIngredients.val('');
         $("#ingredientsdropdown").addClass("hidden");
     }
 }
@@ -70,11 +79,11 @@ var searchIngredient = function () {
     fetch(ingredientApi).then(function (response) {
         response.json().then(function (data) {
             console.log(data);
-            $("#searchforingredients").empty();
+            searchForIngredients.empty();
             inputText.val('');
             data.forEach(item => {
                 var createElement = $(`<li><button onclick='addIngredientToMealPlan("${item}")'>${item}</button></li>`);
-                $('#searchforingredients').append(createElement);
+                searchForIngredients.append(createElement);
             });
         });
     });
@@ -85,5 +94,11 @@ function addIngredientToMealPlan(item) {
     storageData[mealPlanIndex].ingredients = storageData[mealPlanIndex].ingredients || [];
     storageData[mealPlanIndex].ingredients.push(item);
     localStorage.setItem("nutrition", JSON.stringify(storageData));
-    $("#searchforingredients").empty();
+    searchForIngredients.empty();
+
+    // for (var i = 0; i < storageData.ingredients.length; i++) {
+    //     var createElement = $(`<li>${item}</li>`);
+    //     $('#searchforingredients').append(createElement);
+    // }
 }
+

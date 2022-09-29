@@ -31,18 +31,10 @@
   </nav>
 
   <div>
-    <h2>Nutrition</h2>
+    <h2 class="text-lg font-bold">Nutrition</h2>
     <h3>Nutrition Plan</h3>
     <!-- Table for nutrition Plan -->
-    <table id="plan" class="table-auto">
-      <thead>
-        <tr>
-          <th class="meal-col font-bold">Meal name</th>
-          <th class="date-col font-bold">Time</th>
-        </tr>
-      </thead>
-      <tbody id="showplan"></tbody>
-    </table>
+    <div id="showplan"></div>
     <button type="button" onclick="showHidePlan(true)"
       class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Add
       new plan</button>
@@ -91,25 +83,6 @@
     </div>
   </div>
 
-  <!-- ingredients per meal plan -->
-  <div id="mealplaningredientslist">
-    <h2>Plan Name</h2>
-    <h2>Date</h2>
-    <table id="ingredienttable" class="table-auto">
-      <thead>
-        <tr>
-          <th class="ingredient-col font-bold">Meal name</th>
-          <th class="amount-col font-bold">Time</th>
-        </tr>
-      </thead>
-      <tbody id="showplan"></tbody>
-    </table>
-
-
-
-
-  </div>
-
   <!-- Dropdown ingredients  -->
   <div id="ingredientsdropdown" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog"
     aria-modal="true">
@@ -131,20 +104,12 @@
                   <label for="ingredient" class="text-lg font-medium leading-6 text-gray-900 pb-5"
                     placeholder="Ingredient">Search for Ingredient</label>
                   </br>
-                  <div class=" flex absolute inset-y-0 left-0  items-center pl-5 pointer-events-none my-10">
-                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor"
-                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <button type="button" onclick="showHideIngredients(false)"
-                    class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Done</button>
                   <div class="flex">
                     <div class="flex-co relative">
                       <input type="text" name="ingredient" id="ingredientlist"
                         class="border-solid border-2 border-grey rounded-lg text-lg pl-6">
+                      <button type="button" onclick="showHideIngredients(false)"
+                        class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Done</button>
                       <ul class="absolute w-full bg-white" id="searchforingredients">
                       </ul>
                     </div>
@@ -157,13 +122,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
