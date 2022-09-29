@@ -9,6 +9,15 @@
 nav{
     color: #f95738;
 }
+nav p{
+    font-size: 40px;
+   display: flex;
+   justify-content: flex-start;
+}
+
+nav i{
+   
+}
 
 .logo {
     width: 1in;
