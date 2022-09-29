@@ -4,7 +4,11 @@ for this project we decided to generate a website that with generate a workout a
 ## HTML/CSS: Darby
 I was tasked with doing the front end build of the site and the styling for it. I made the layout for the mockup and the layouts for most of the pages. Tatiana made the calander and the buttons that generate the height, weight, event, and BMI on the progress page. I built the rest of the layout for the pages. 
 
-## Javascript: Tyler
+## Javascript: Ty
+The workout page pulls the exercises we use from the API with some jQuery for some nice ease of use. Local storage will be used to save the dates for each workout chosen. The descriptions will display when focused on.
+
+
+
 ## Javascript: Tatiana
 The progress page written mostly with JavaScript. Could not use the API we have choosen because of lack of documentation and features. Created local storage to store the weight, height and date. Created a function to calculate BMI.
 Added a calendar to track the workout progress page.
