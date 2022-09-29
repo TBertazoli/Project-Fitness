@@ -61,3 +61,7 @@ nav p{
     padding: 10px;
     margin: 5px
 }
+.workout{
+    display: flex;
+    justify-content: space-between;
+}
