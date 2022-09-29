@@ -11,8 +11,7 @@ var displayExercise = function () {
                 $(function() {$("#datepicker").datepicker();});    
                 if ($('.workout').click(function (e) {
                 e.preventDefault();
-                $(".workout").append(data.results[i].description);
-                console.log(data.results[i].description);
+                //$(".workout").append(data.results[i].description);
             }));
         });
     });
