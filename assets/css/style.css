@@ -1,66 +1,96 @@
-
 * {
-    box-sizing: border-box;
-    border: 2px solid red;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  color: #f95738;
+}
+nav p {
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
 
-}
-nav{
-    color: #f95738;
-}
-nav p{
-    font-size: 40px;
-   display: flex;
-   justify-content: flex-start;
-}
-
-nav i{
-   
+nav i {
 }
 
 .logo {
-    width: 1in;
-    height: 1in;
-    margin-left: 10px;
+  width: 1in;
+  height: 1in;
+  margin-left: 10px;
 }
 
-.image-banner{
-    width: 100%;
-    height:auto;
+.image-banner {
+  width: 100%;
+  height: auto;
 }
 
-.jumbotron{
-    padding: 10px 0px 10px 0px;
+.jumbotron {
+  padding: 10px 0px 10px 0px;
 }
 
-.card{
-    padding: 5px 0px 10px 0px;
-
+.card {
+  padding: 5px 0px 10px 0px;
 }
 
 .progress-section {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .exercise-history {
-    font-weight: bold;
-    margin: 10px;
-    text-align: center;
-    padding: 20px;
-    border: solid black 3px;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  border: solid black 3px;
 }
 
 /* column css */
-.date-col, 
+.date-col,
 .weight-col {
-    border: solid black 3px;
-    padding: 5px;
-    text-align: center;
+  border: solid black 3px;
+  padding: 5px;
+  text-align: center;
 }
 
 .shortcut {
-    border: solid grey 2px;
-    padding: 10px;
-    margin: 5px
+  border: solid grey 2px;
+  padding: 10px 5px 5px 5px;
+  margin: 5px;
+  width: 2in;
+  height: 2in;
 }
+
+.button-shortcut {
+  position: relative;
+  top: 90px;
+}
+
+.img {
+  width: 100%;
+  height: 90%;
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 5px 0px;
+}
+
+
+.weight-progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top:5px ;
+}
+
+#showweight{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 5px 0px;
+}
+
