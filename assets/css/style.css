@@ -10,14 +10,11 @@ nav {
     color: #f95738;
 }
 
-<<<<<<< HEAD
-=======
 nav p {
     font-size: 40px;
     display: flex;
     justify-content: flex-start;
 }
->>>>>>> b7bfdc6b6b35bb7ba0b3a3bae081df31377b8d8b
 
 .logo {
     width: 1in;
