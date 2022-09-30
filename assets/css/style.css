@@ -110,11 +110,7 @@ form {
     align-items: center;
     justify-content: center;
 }
-
-    border: solid grey 2px;
-    padding: 10px;
-    margin: 5px
-}
+    
 
 /* CSS for nutrition section */
 .populate-plan {
