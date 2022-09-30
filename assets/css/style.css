@@ -41,16 +41,6 @@ nav p {
 }
 
 .card {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  padding: 5px 0px 10px 0px;
-  height: fit-content;
-=======
-   display: flex;
-   align-items: center;
-   justify-content: center;
->>>>>>> 7a083993f4f0e77ccd9775df0175e3d15833472f
-=======
 
   padding: 5px 0px 10px 0px;
   height: fit-content;
@@ -58,7 +48,6 @@ nav p {
   align-items: center;
   justify-content: center;
 
->>>>>>> 2478c225753277136fdc830e8e71f3462c57602e
 
 }
 
@@ -69,9 +58,9 @@ nav p {
 
 .exercise-history {
   font-weight: bold;
-  margin: 10px;  
+  margin: 10px;
   padding: 20px;
-  
+
 }
 
 .date-col,
@@ -104,7 +93,7 @@ nav p {
   display: flex;
   justify-content: center;
   padding: 10px 0px 5px 0px;
-  
+
 }
 
 
@@ -137,3 +126,4 @@ form {
 .meal-name {
   font-weight: bold;
 }
+
