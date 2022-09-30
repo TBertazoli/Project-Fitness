@@ -127,3 +127,12 @@ form {
   font-weight: bold;
 }
 
+/* CSS for workout section */
+
+.workout-style {
+  display: flex;
+  }
+/* 
+  .btn {
+    
+  } */

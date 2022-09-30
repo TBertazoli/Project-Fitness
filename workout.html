@@ -55,11 +55,15 @@
     </div>
   </div>
 
-  <main class="exercise"></main>
+  <main> 
+  
+  <div id="exercise">
+    <h2 class="font-bold mb-3 border-2 dark:bg-red-200">Click on the exercise to see description</h2>
+  </div>
   </main>
 
   <!-- Modal exercise description -->
-  <div id="exercisedescription" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div id="exercisedescription" class="relative z-10 hidden" aria-labelledby="modal-title" role="alert" aria-modal="true">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
     <div class="fixed inset-0 z-10 overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
@@ -77,12 +81,12 @@
                 <div class="my-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <label class="text-lg font-medium leading-6 text-gray-900 mb-4">Description</label>
                   </br>
-                  <p id="description"></p> 
+                  <p id="description" class="mt-2 text-justify"></p> 
                 </div>
               </div>
-              <button type="button"
+              <button type="button" onclick="showHideDescription(false)"
                 class="ml-auto -mx-1.5 -my-1.5 bg-red-100 dark:bg-red-200 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 dark:hover:bg-red-300 inline-flex h-8 w-8"
-                data-dismiss-target="#alert-border-4" aria-label="Close">
+                data-dismiss-target="#exercisedescription" aria-label="Close">
                 <span class="sr-only">Dismiss</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
