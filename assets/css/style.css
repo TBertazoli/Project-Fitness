@@ -8,6 +8,7 @@
 nav {
   color: #f95738;
 }
+
 nav p {
   font-size: 40px;
   display: flex;
@@ -31,18 +32,22 @@ nav p {
 
 .card {
   padding: 5px 0px 10px 0px;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .jumbotron {
-    padding: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .card {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+
+  padding: 5px 0px 10px 0px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
@@ -53,13 +58,10 @@ nav p {
 
 .exercise-history {
   font-weight: bold;
-  margin: 10px;
-  text-align: center;
+  margin: 10px;  
   padding: 20px;
-  border: solid black 3px;
+  
 }
-
-/* column css */
 
 .date-col,
 .weight-col {
@@ -91,6 +93,7 @@ nav p {
   display: flex;
   justify-content: center;
   padding: 10px 0px 5px 0px;
+  
 }
 
 
@@ -98,31 +101,28 @@ nav p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top:5px ;
+  padding-top: 5px;
 }
 
-#showweight{
-    display: flex;
-    align-items: center;
-    padding: 10px 0px 5px 0px;
+#showweight {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 5px 0px;
 }
 
 form {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-    
+
 
 /* CSS for nutrition section */
 .populate-plan {
-font-size: 20px;
-border-radius: 3px;
-border-color: black;
+  font-size: 20px;
+  border-radius: 3px;
+  border-color: black;
 }
 
 .meal-name {
-    font-weight: bold;  
+  font-weight: bold;
 }
-
-
-
