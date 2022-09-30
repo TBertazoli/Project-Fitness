@@ -41,8 +41,14 @@ nav p {
 }
 
 .card {
+<<<<<<< HEAD
   padding: 5px 0px 10px 0px;
   height: fit-content;
+=======
+   display: flex;
+   align-items: center;
+   justify-content: center;
+>>>>>>> 7a083993f4f0e77ccd9775df0175e3d15833472f
 
 }
 
