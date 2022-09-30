@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 nav {
   color: #f95738;
 }
@@ -12,7 +13,6 @@ nav p {
   display: flex;
   justify-content: flex-start;
 }
-
 
 .logo {
   width: 1in;
@@ -31,8 +31,22 @@ nav p {
 
 .card {
   padding: 5px 0px 10px 0px;
+    width: 100%;
+    height: auto;
 }
 
+.jumbotron {
+    padding: 10px 0px 10px 0px;
+}
+
+.card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+/* CSS for progres section */
 .progress-section {
   font-size: 20px;
 }
@@ -46,6 +60,7 @@ nav p {
 }
 
 /* column css */
+
 .date-col,
 .weight-col {
   border: solid black 3px;
@@ -92,9 +107,21 @@ nav p {
     padding: 10px 0px 5px 0px;
 }
 
-form{
+form {
     align-items: center;
     justify-content: center;
+}
+    
+
+/* CSS for nutrition section */
+.populate-plan {
+font-size: 20px;
+border-radius: 3px;
+border-color: black;
+}
+
+.meal-name {
+    font-weight: bold;  
 }
 
 

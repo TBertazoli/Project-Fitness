@@ -3,9 +3,9 @@ $(document).ready(() => {
     populateWeightHistory();
 });
 
+//global variables
 var todaysDate = moment().format("YYYY-MM-DD");
 var mainSection = $("#mainsection");
-var apiKey = "c45e4b59343fbe91045af5de68b5208ef9091deb";
 var storageData = null;
 var weightInput = $("#weight");
 var heightInput = $("#height");
@@ -75,6 +75,7 @@ function submitHeight() {
     showHideHeightModal(false);
 }
 
+// function to read from storage
 function readFromStorage() {
     storageData = JSON.parse(localStorage.getItem("BBB")) || {};
     if (storageData.events) {
@@ -85,12 +86,13 @@ function readFromStorage() {
     }
 }
 
+//function to add workout complete
 function addWorkoutHistory() {
 
 }
 
 
-
+//function to calculate BMI
 function calculateBMI() {
     if (storageData.height && storageData.height.length > 0 &&
         storageData.weight && storageData.weight.length > 0) {
