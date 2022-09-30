@@ -7,11 +7,10 @@ var displayExercise = function () {
             console.log(data);
             for (i = 0; i < data.results.length; i++)
                 $(".exercise").append('<h2 class="workout">' + data.results[i].name + '</h2>');
-                $(".workout").append('<form>Date: <input type="text" id="datepicker"></form>');
-                $(function() {$("#datepicker").datepicker();});    
-                if ($('.workout').click(function (e) {
-                e.preventDefault();
-                //$(".workout").append(data.results[i].description);
+            $(".workout").append('<button class="btn">Completed</button>');
+            if ($('.workout').click(function () {
+                //e.preventDefault();
+                $(".workout").append(data.results.description);
             }));
         });
     });

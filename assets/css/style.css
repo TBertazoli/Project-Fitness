@@ -72,7 +72,17 @@ nav p {
     padding: 10px;
     margin: 5px
 }
+
+/* CSS for workout page */
 .workout{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 10px;
+    margin: auto;
+    font-size: larger;
+}
+.btn{
+  background: red;
+  border: 3px solid red;
+  border-radius: 8px;
 }
