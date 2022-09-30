@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <html lang="en">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets\css\style.css">
-        
-        <title>Project-Fitness</title>
-    </head>
+<head>
+  <html lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets\css\style.css">
+
+  <title>Project-Fitness</title>
+</head>
+
 <body>
   <nav class=" flex items-center justify-between flex-wrap bg-blue-800">
-    <img class="logo" src="assets\images\logo-Placeholder.png"href="https://tbertazoli.github.io/Project-Fitness"></img>
+    <img class="logo" src="assets\images\logo-Placeholder.png"
+      href="https://tbertazoli.github.io/Project-Fitness"></img>
     <p>Bikini Body Babes</p>
+
     <div class="text-md flex justify-end">
-        <a href="index.html" class=" block mt-4 lg:inline-block lg:mt-0 text-orange-600 hover:text-blue-800 mr-6">
-            <i class="fa fa-home"></i>
-        </a>
+      <a href="index.html" class=" block mt-4 lg:inline-block lg:mt-0 text-orange-600 hover:text-blue-800 mr-6">
+        <i class="fa fa-home"></i>
+      </a>
       <a href="workout.html" class="block mt-4 lg:inline-block lg:mt-0 text-orange-600 hover:text-blue-800 mr-6">
         Workout
       </a>
@@ -174,9 +178,104 @@
       <a class="text-orange-600" href="https://tailwind-elements.com/">Tailwind Elements</a>
     </div>
   </footer>
+    <div class="bg-sky-600">
+      <h3 class="text-xl font-bold">Nutrition Plan</h3>
+    </div>
+  <div class="mx-2">
+    <!-- div for nutrition Plan -->
+    <div id="showplan"></div>
+    <button type="button" onclick="showHidePlan(true)"
+      class="w-full rounded-md border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mt-4 sm:w-auto sm:text-sm">Add
+      new plan</button>
+  </div>
 
+
+
+  <!-- Modal Nutrition Plan -->
+  <div id="addnutritionplanmodal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div
+          class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div
+                class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                <span class="material-symbols-outlined">
+                  menu_book
+                </span>
+              </div>
+              <div class="flex-col">
+                <div class="my-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <label for="mealname" class="text-lg font-medium leading-6 text-gray-900 mb-4"
+                    placeholder="breakfast">Meal name</label>
+                  </br>
+                  <input type="text" name="mealname" id="mealname" class="border-solid border-2 border-grey">
+                  <div class="my-3 text-center sm:mt-0  sm:text-left">
+                    <label for="time" class="text-lg font-medium leading-6 text-gray-900">Time</label>
+                    </br>
+                    <input type="time" name="time" id="time" class="border-solid border-2 border-grey">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+              <button type="button" onclick="submitNewPlan()"
+                class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Submit</button>
+              <button type="button" onclick="showHidePlan(false)"
+                class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown ingredients  -->
+  <div id="ingredientsdropdown" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div
+          class="relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div
+                class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                <span class="material-symbols-outlined">
+                  menu_book
+                </span>
+              </div>
+              <div class=" relative">
+                <div class="my-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <label for="ingredient" class="text-lg font-medium leading-6 text-gray-900 pb-5"
+                    placeholder="Ingredient">Search for Ingredient</label>
+                  </br>
+                  <div class="flex">
+                    <div class="flex-co relative">
+                      <input type="text" name="ingredient" id="ingredientlist"
+                        class="border-solid border-2 border-grey rounded-lg text-lg pl-6">
+                      <button type="button" onclick="showHideIngredients(false)"
+                        class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Done</button>
+                      <ul class="absolute w-full bg-white" id="searchforingredients">
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets\js\script.js"></script>
+  <script src="assets\js\nutrition.js"></script>
 </body>
 
 </html>
