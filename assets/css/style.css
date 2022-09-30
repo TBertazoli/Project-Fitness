@@ -124,7 +124,8 @@ form {
 .meal-name {
   font-weight: bold;
 /* CSS for workout page */
-.workout{
+
+.workout {
     display: flex;
     justify-content: space-between;
     padding: 10px;
