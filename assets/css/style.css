@@ -71,11 +71,9 @@ nav p {
 }
 
 .shortcut {
-  border: solid grey 2px;
-  padding: 10px 5px 5px 5px;
-  margin: 5px;
-  width: 2in;
-  height: 2in;
+    border: solid grey 2px;
+    padding: 10px;
+    margin: 5px
 }
 
 .button-shortcut {
